@@ -6,11 +6,24 @@ import NPC
 t = Board.Board()
 npc = NPC.NPC("O")
 
-t.printTabuleiro()
+
+#Escolhendo quem ira fazer o primeiro movimento
+whoFirst = raw_input("Você quer jogar primeiro? [s/n]")
+while True:
+    if whoFirst == "s":
+        rounds = 0
+        break
+    elif whoFirst == "n":
+        rounds = 1
+        break
+    print "digite 's' ou 'n'"
+    whoFirst = raw_input("Você quer jogar primeiro? [s/n]")
+
+if rounds == 0:
+    t.printTabuleiro()
 
 #Loop do jogo
-i = 0
-while(i < 9):
+for i in range(rounds, rounds +10):
     if i%2 != 0: #Vez da Maquina
         mark = "O"
         npc.play(t)
@@ -31,6 +44,5 @@ while(i < 9):
         else: 
             print "Você perdeu, Vai tentar de novo?"
         break
-    i += 1
 if i == 9:
     print "Empate!"

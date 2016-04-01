@@ -28,73 +28,72 @@ class NPC:
     def play(self, tabuleiro):
         weight_npc, agent_npc = self.peso(tabuleiro, self.mark)
         weight_player, agent_player = self.peso(tabuleiro, "X")
-        print weight_player, weight_npc
         if weight_player > weight_npc:
             if agent_player == "Linha 1":
-                print "entrou na linha 1 player"
+                #print "entrou na linha 1 player"
                 self.tryPlay(tabuleiro, self.mark, 1, 2, 3)
 
             elif agent_player == "Linha 2":
-                print "entrou na linha 2 player"
+                #print "entrou na linha 2 player"
                 self.tryPlay(tabuleiro, self.mark, 4, 5, 6)
 
             elif agent_player == "Linha 3":
-                print "entrou na linha 3 player"
+                #print "entrou na linha 3 player"
                 self.tryPlay(tabuleiro, self.mark, 7, 8, 9)
 
             elif agent_player == "Coluna 1":
-                print "entrou na coluna 1 player"
+                #print "entrou na coluna 1 player"
                 self.tryPlay(tabuleiro, self.mark, 1, 4, 7)
 
             elif agent_player == "Coluna 2":
-                print "entrou na coluna 2 player"
+                #print "entrou na coluna 2 player"
                 self.tryPlay(tabuleiro, self.mark, 2, 5, 8)
 
             elif agent_player == "Coluna 3":
-                print "entrou na coluna 3 player"
+                #print "entrou na coluna 3 player"
                 self.tryPlay(tabuleiro, self.mark, 3, 6, 9)
 
             elif agent_player == "Diagonal 1":
-                print "entrou na diagonal 1 player"
+                #print "entrou na diagonal 1 player"
                 self.tryPlay(tabuleiro, self.mark, 1, 5, 9)
 
             elif agent_player == "Diagonal 2":
-                print "entrou na linha 2 player"
+                #print "entrou na linha 2 player"
                 self.tryPlay(tabuleiro, self.mark, 3, 5, 7) 
         else:
             if agent_npc == "Linha 1":
-                print "entrou na linha 1"
+                #print "entrou na linha 1"
                 self.tryPlay(tabuleiro, self.mark, 1, 2, 3)
 
             elif agent_npc == "Linha 2":
-                print "entrou na linha 2"
+                #print "entrou na linha 2"
                 self.tryPlay(tabuleiro, self.mark, 4, 5, 6)
 
             elif agent_npc == "Linha 3":
-                print "entrou na linha 3"
+                #print "entrou na linha 3"
                 self.tryPlay(tabuleiro, self.mark, 7, 8, 9)
 
             elif agent_npc == "Coluna 1":
-                print "entrou na coluna 1"
+                #print "entrou na coluna 1"
                 self.tryPlay(tabuleiro, self.mark, 1, 4, 7)
 
             elif agent_npc == "Coluna 2":
-                print "entrou na coluna 2"
+                #print "entrou na coluna 2"
                 self.tryPlay(tabuleiro, self.mark, 2, 5, 8)
 
             elif agent_npc == "Coluna 3":
-                print "entrou na coluna 3"
+                #print "entrou na coluna 3"
                 self.tryPlay(tabuleiro, self.mark, 3, 6, 9)
 
             elif agent_npc == "Diagonal 1":
-                print "entrou na diagonal 1"
+                #print "entrou na diagonal 1"
                 self.tryPlay(tabuleiro, self.mark, 1, 5, 9)
 
             elif agent_npc == "Diagonal 2":
-                print "entrou na linha 2"
+                #print "entrou na linha 2"
                 self.tryPlay(tabuleiro, self.mark, 3, 5, 7) 
             else:
-                print "jogou padrao"
+                #print "jogou padrao"
                 tabuleiro = self.defaultPlay( tabuleiro )
 
         return tabuleiro
@@ -138,8 +137,6 @@ class NPC:
         opponentMark = "X"
         if mark == "X":
             opponentMark = "O"
-        #else :
-        #    oppenentMark = "X"
             
         if (tab.tab[a] != opponentMark and
             tab.tab[b] != opponentMark and tab.tab[c] != opponentMark):
